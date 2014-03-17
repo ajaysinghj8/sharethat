@@ -1,0 +1,18 @@
+<div class="box1">
+   				 <h3><%= link_to(p.title_clean,{:action => "single"}) %></h3>
+    				<span>By Kieth Deviec- 2 hours ago<span class="comments">8 Comments</span></span> 
+			   <div class="view">
+					<div class="view-back">
+						<span class="views" title="views"><%=p.views%></span>
+						<span class="likes" title="likes">(124)</span>
+						<span class="link" title="link">(24)</span>
+						<%= link_to({:action => "single"}) %>
+					</div>
+					<a href="single.html"><img src="images/img1.jpg"></a>
+				</div>
+				<div class="data">
+				    <p><%=p.article%></p>
+				    <span><%=link_to('Continue reading >>>',{:action => 'single'})%></span>
+				</div>
+			<div class="clear"></div>
+		</div>

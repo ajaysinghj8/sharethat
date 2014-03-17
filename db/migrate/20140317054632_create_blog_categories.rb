@@ -4,6 +4,7 @@ class CreateBlogCategories < ActiveRecord::Migration
       t.string :name, :limit => 45, :null => false
       t.string :name_clean, :limit => 45, :null => false
       t.boolean :enabled, :default => true
+      t.integer :count_value, :default => 0
       t.timestamps
     end
   end
