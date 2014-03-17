@@ -36,7 +36,7 @@
 			</div>
 </div>
 <div class="sidebar">
-	<%=render('blog_cat')%>
+	<%=render('blog_cat',:locals => {:category => @category})%>
 	<%=render('popular_post')%>
 	<%=render('latest_comment')%>
 	<%=render('latest_photo')%>
