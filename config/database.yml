@@ -54,7 +54,16 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: sharethat_dev
+  database: da8pp17m2q7efa
   pool: 5
-  username: postgres
-  password: '@ajay123'
+  username: kkmuxxmihkuhkq
+  password: Ey9uLyhqsZKGmpGPnFsXjtDqj7
+
+  # Connect on a TCP socket. Omitted by default since the client uses a
+  # domain socket that doesn't need configuration. Windows does not have
+  # domain sockets, so uncomment these lines.
+  host: ec2-54-204-21-178.compute-1.amazonaws.com
+
+  # The TCP port the server listens on. Defaults to 5432.
+  # If your server runs on a different port number, change accordingly.
+  port: 5432
