@@ -2,10 +2,9 @@ class HomeController < ApplicationController
  
 layout 'main_app'
 
-   def initilize	
-     @category = BlogCategory.all
-   end
+    
    def index
+   	@category = BlogCategory.all
    	@limit = 4
   	@offset = 0
     @posts_all = BlogPost.newest_first @limit,@offset
