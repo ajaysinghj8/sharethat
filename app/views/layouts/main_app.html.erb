@@ -1,0 +1,33 @@
+
+<!DOCTYPE HTML>
+<head>
+<title><%= @page_title || ":.Share That.:"%></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<%= stylesheet_link_tag    "main_app", media: "all", "data-turbolinks-track" => true %>
+<link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+	<!-- light-box -->
+	<%= javascript_include_tag "jquery-1.10.1.min.js", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "jquery.mousewheel-3.0.6.pack.js", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "jquery.fancybox.js", "data-turbolinks-track" => true %>
+	<%= stylesheet_link_tag    "jquery.fancybox.css", media: "screen", "data-turbolinks-track" => true %>
+         <script type="text/javascript">
+			$(document).ready(function() {
+
+				$('.fancybox').fancybox();
+
+			});
+		</script>
+	<!-- -- End Light-box ---- -->
+</head>
+<body>
+  <% if !flash[:notice].blank? %>
+   		<p><%=flash[:notice]%></p>
+	<%end%>
+    
+ <%= yield %>
+
+ 
+</body>
+</html>

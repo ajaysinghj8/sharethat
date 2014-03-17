@@ -1,0 +1,52 @@
+<div class="header">
+ <div class="header_top">
+    <div class="wrap">
+	  <div class="header-top-left">
+			<div class="logo">
+			     <%= link_to({:controller=> 'home',:action => 'index'}) do%>
+			     	<h1>SHARE</h1>
+			     	<h2>That</h2>
+			     <%end %>
+			</div>
+		<div class="menu">
+	     	<ul class="menu bounce">
+				<li class="active"><%=link_to("Home", {:controller => "home", :action => "index"}, 
+				  :class => current_page?(controller: 'home',action: 'index')? 'active' : nil)%></li>
+	       		<li><%=link_to("About", {:controller => "home", :action => "single"},
+	       		  :class => current_page?(controller: 'home',action: 'single')? 'active' : nil)%></li>
+	       		<li><%=link_to("Support", {:controller => "home", :action => "single"},
+	       		:class => current_page?(controller: 'home',action: 'single')? 'active' : nil)%></li>
+	       		<li><%=link_to("Contact", {:controller => "home", :action => "contact"},
+	       		:class => current_page?(controller: 'home',action: 'contact')? 'active' : nil)%></li>
+   		  </ul>
+	   </div>
+	 <div class="clear"></div>
+   </div>  
+	   <div class="header-top-right">
+	   			<div class="social-icons">			
+		                <ul>
+		                	<li><%= link_to({:action =>'index'},:class=>'youtube') do%><span>Youtube</span><%end%></li>
+		                    <li><%= link_to({:action =>'index'},:class=>'facebook') do%><span>FaceBook</span><%end%></li>
+		                    <li><%= link_to({:action =>'index'},:class=>'twitter') do%><span>Twitter</span><%end%></li>
+		                    <li><%= link_to({:action =>'index'},:class=>'skype') do%><span>Skype</span><%end%></li>
+		                    <li><%= link_to({:action =>'index'},:class=>'Likedin') do%><span>Linkedin</span><%end%></li>
+		                    <li><%= link_to({:action =>'index'},:class=>'vimeo') do%><span>Vimeo</span><%end%></li>
+		                    <div class="clear"></div>
+		                </ul>
+		 		    </div>   	   
+				   			<div class="search_box">
+  							    <%= form_tag('/search',method: 'get') do %>
+								  <%= text_field_tag('txt_search','Search for Blog',:class =>'text-box') %>
+								  <%= submit_tag() %>
+								<% end %>
+							    <!--<form>
+									<input type="text" class="text-box" placeholder="Search for Blog"><input type="submit" value="" />
+							    </form>
+							    -->
+						   </div>
+			  		 <div class="clear"></div>
+		  		 </div>
+		  		<div class="clear"></div>
+	  		</div>
+		</div>
+</div>
