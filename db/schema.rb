@@ -25,9 +25,10 @@ ActiveRecord::Schema.define(version: 20140317054815) do
   end
 
   create_table "blog_categories", force: true do |t|
-    t.string   "name",       limit: 45,                null: false
-    t.string   "name_clean", limit: 45,                null: false
-    t.boolean  "enabled",               default: true
+    t.string   "name",        limit: 45,                null: false
+    t.string   "name_clean",  limit: 45,                null: false
+    t.boolean  "enabled",                default: true
+    t.integer  "count_value",            default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

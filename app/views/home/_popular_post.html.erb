@@ -1,20 +1,12 @@
 <div class="popular-post">
 				<h3>popular-posts</h3>
+                   <% for post in @popular_posts%>
 					<div class="post-grid">
-						<img src="images/latest-post-img1.jpg" title="post1" alt=""/>
-						<p>Lorem ipsum dolor sit amet consectetur dolor more normal of letters,<a href="#">[...]</a></p>
-							<div class="clear"> </div>
+						<%=image_tag(post.banner_image)%>
+						<p><%=post.title%><a href="#">[...]</a></p>
+						<div class="clear"> </div>
 					  </div>
-					    <div class="post-grid">
-							<img src="images/latest-post-img2.jpg" title="post1" alt=""/>
-							  <p>Lorem ipsum dolor sit dolor more normal consectetur of letters,<a href="#">[...]</a></p>
-								<div class="clear"> </div>
-						</div>
-						<div class="post-grid">
-							<img src="images/latest-post-img3.jpg" title="post1" alt=""/>
-							  <p>Lorem ipsum dolor sit dolor more normal consectetur of letters sit amet,<a href="#">[...]</a></p>
-								<div class="clear"> </div>
-						</div>
+                   <%end%>
 					<div class="view-all"><a href="#">
 						</a><a href="#">ViewAll</a>
 					</div>

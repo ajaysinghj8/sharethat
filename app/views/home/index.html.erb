@@ -9,11 +9,6 @@
           <% else %>
                <%='No post Found.'%>
           <% end %>
-
-
-
-
-
 			 		<div class="page_links">
 						<div class="next_button">
 							 <a href="#">Next</a>
@@ -37,7 +32,7 @@
 </div>
 <div class="sidebar">
 	<%=render('blog_cat',:locals => {:category => @category})%>
-	<%=render('popular_post')%>
+	<%=render('popular_post',:locals =>{:popular_posts =>@popular_posts})%>
 	<%=render('latest_comment')%>
 	<%=render('latest_photo')%>
 	<div class="clear"></div>
