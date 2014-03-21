@@ -25,9 +25,8 @@
   <% if !flash[:notice].blank? %>
    		<p><%=flash[:notice]%></p>
 	<%end%>
-    
+<%= render(:partial => 'header')%>    
  <%= yield %>
-
- 
+<%= render(:partial => 'footer')%>
 </body>
 </html>
