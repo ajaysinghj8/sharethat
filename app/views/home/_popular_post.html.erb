@@ -3,7 +3,7 @@
                    <% for post in @popular_posts%>
 					<div class="post-grid">
 						<%=image_tag(post.banner_image)%>
-						<p><%=post.title%><a href="#">[...]</a></p>
+						<p><%= link_to(post.title_clean,{:action => "single",:id => post.id}) %></p>
 						<div class="clear"> </div>
 					  </div>
                    <%end%>
